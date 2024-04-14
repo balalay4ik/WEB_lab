@@ -48,3 +48,69 @@ body {
     column-gap: 30px;
     row-gap: 20px;
 }
+
+.add-modal, .edit-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.add-modal_content, .edit-modal_content {
+    position: fixed;
+    left: calc(50% - 286px);
+    top: 100px;
+    background-color: white;
+    border: 1px solid rgb(189, 184, 184);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.add-modal_header, .edit-modal_header {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+}
+
+.modal_active{
+    display: block;
+}
+
+.add-modal_title, .edit-modal_title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.add-modal_form, .edit-modal_form{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 10px;
+}
+
+.row-selected{
+    --bs-table-bg: #a3a3a391;
+}
+
+.modal-form input[type="text"],
+.modal-form input[type="phone"] {
+    width: 200px; 
+    padding: 8px 8px;
+    margin-top: 8px;
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.modal-form input[type="text"]:focus,
+.modal-form input[type="phone"]:focus {
+    outline: none; 
+    border-color: #0062cc; 
+    box-shadow: 0 0 0 2px rgba(0, 98, 204, 0.2); 
+}
