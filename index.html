@@ -43,27 +43,27 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr>
-                              <td>1</td>
-                              <td>Игорь</td>
-                              <td>+9999</td>
+                          <tr class="table-row">
+                              <td class="table-col-data_1">1</td>
+                              <td class="table-col-data_2">Игорь</td>
+                              <td class="table-col-data_3">+9999</td>
                           </tr>
-                          <tr>
-                              <td>2</td>
-                              <td>Даня</td>
-                              <td>+9999</td>
+                          <tr class="table-row">
+                              <td class="table-col-data_1">2</td>
+                              <td class="table-col-data_2">Даня</td>
+                              <td class="table-col-data_3">+9999</td>
                           </tr>
-                          <tr>
-                              <td>3</td>
-                              <td>Богдан</td>
-                              <td>+9999</td>
+                          <tr class="table-row">
+                              <td class="table-col-data_1">3</td>
+                              <td class="table-col-data_2">Богдан</td>
+                              <td class="table-col-data_3">+9999</td>
                           </tr>
                       </tbody>
                   </table>
                   <div class="flex-wrap btn-block">
-                    <button type="button" class="btn btn-login py-2">Додати</button>
-                    <button type="button" class="btn btn-login py-2">Видалити</button>
-                    <button type="button" class="btn btn-login py-2">Редагувати</button>
+                    <button type="button" id="btn-add" class="btn btn-login py-2">Додати</button>
+                    <button type="button" id="btn-remove" class="btn btn-login py-2">Видалити</button>
+                    <button type="button" id="btn-edit" class="btn btn-login py-2">Редагувати</button>
                 </div>
               </div>
           </div>
@@ -80,8 +80,44 @@
       </footer>
 
     </div>
+
+
+    <div class="add-modal">
+      <div class="add-modal_content">
+          <div class="add-modal_header">
+              <h4 class="add-modal_title">Додати контакт</h4>
+              <button type="button" id="btn-add-close" class="btn btn-login py-2" style="width:40px">X</button>
+          </div>
+          <div class="add-modal_body">
+              <form action="#" class="modal-form">
+                  <input required placeholder="Ім'я" name="name" type="text" class="add-modal_name">
+                  <input required placeholder="Номер" name="phone" type="phone" class="add-modal_phone">
+                  <button type="button" id="btn-add_modal" class="btn btn-login py-2">Додати</button>
+              </form>
+              <p id="addErrorMessage"></p>
+          </div>
+      </div>
+    </div>
+
+    <div class="edit-modal">
+      <div class="edit-modal_content">
+          <div class="edit-modal_header">
+              <h4 class="edit-modal_title">Редагувати контакт</h4>
+              <button type="button" id="btn-edit-close" class="btn btn-login py-2" style="width:40px">X</button>
+          </div>
+          <div class="edit-modal_body">
+              <form action="#" class="modal-form">
+                  <input required placeholder="Ім'я" name="name" type="text" class="edit-modal_name">
+                  <input required placeholder="Номер" name="phone" type="phone" class="edit-modal_phone">
+                  <button type="button" id="btn-edit_modal" class="btn btn-login py-2">Редагувати</button>
+              </form>
+              <p id="editErrorMessage"></p>
+          </div>
+      </div>
+    </div>
+
 </body>
 
-
+<script type="module" src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script> 
 </html>
