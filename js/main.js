@@ -49,14 +49,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
         if(!view.validatePhone(phone) && name.length == 0)
         {
-            controller.addErrorMessage.innerHTML = "Некоректний формат імені та номеру";
+            controller.editErrorMessage.innerHTML = "Некоректний формат імені та номеру";
         }
         else if (!view.validatePhone(phone))
         {
-            controller.addErrorMessage.innerHTML = "Некоректний формат номеру";
+            controller.editErrorMessage.innerHTML = "Некоректний формат номеру";
         }
         else if (name.length == 0) {
-            controller.addErrorMessage.innerHTML = "Некоректний формат імені";
+            controller.editErrorMessage.innerHTML = "Некоректний формат імені";
         } 
 
         if(!view.validatePhone(phone) || name.length == 0) return;
